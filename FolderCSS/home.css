@@ -28,17 +28,31 @@
   /* position: relative; */
 }
 
-/* Bottom right text */
-.text-block {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: rgba(0, 0, 0, 0.747);
-  border-radius: 3px;
-
+.div-img h1{
   color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 70px;
+  text-align: center;
+  padding-top: 120px;
+}
+
+.div-text {
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .div-img {
+    height: 150px;
+  }
+
+  .div-img h1 {
+    font-size: 55px;  
+    padding-top: 50px;
+  }
+
+  .div-text {
+    margin-top: 30px;
+    margin-left: 20px;
+  }
 }
