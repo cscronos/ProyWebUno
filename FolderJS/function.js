@@ -13,7 +13,6 @@ function scrollFunction() {
     elMain[1].style.marginTop = "49px";
     elMain[2].style.marginTop = "49px";
     elMain[3].style.marginTop = "49px";
-    elMain[4].style.marginTop = "49px";
     navChico[0].style.position = "fixed";
     navChico[0].style.marginTop = "-110px";
 
@@ -23,7 +22,6 @@ function scrollFunction() {
     elMain[1].style.marginTop = "0px";
     elMain[2].style.marginTop = "0px";
     elMain[3].style.marginTop = "0px";
-    elMain[4].style.marginTop = "0px";
     navChico[0].style.position = "absolute";
     navChico[0].style.marginTop = "0px";
   }
