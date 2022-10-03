@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- METAS -->
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Bokato Sushi</title>
+    <!-- lINKS CSS -->
+    <link rel="stylesheet" href="FolderCSS/style.css">
+    <link rel="stylesheet" href="FolderCSS/home.css">
+    <link rel="stylesheet" href="FolderCSS/productos.css">
+    <link rel="stylesheet" href="FolderCSS/quienessomos.css">
+    <link rel="stylesheet" href="FolderCSS/historia.css">
+    <link rel="stylesheet" href="FolderCSS/equipo.css">
+    <link rel="stylesheet" href="FolderCSS/contacto.css">
+    <!-- LINKS JS -->
+    <script src="FolderJS/esconder.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1 id="logo0">Bokato Sushi</h1>
+        <img id="logo1" src="Imagenes/sushi-solid-240.png" alt="logo sushi">
+    </header>
+
+    <!-- NAV -->
+    <nav class="navbar" id="myFun">
+        <a href="#" onclick="ActivDiv(1)">Home</a>
+        <a href="FolderProductos/indexProd.html">Productos</a>
+        <a href="#" onclick="ActivDiv(3)">Quienes somos</a>
+        <a href="#" onclick="ActivDiv(4)">Historia</a>
+        <a href="#" onclick="ActivDiv(5)">Equipo</a>
+        <a href="#" onclick="ActivDiv(6)">Contacto</a>
+        <button id="boton">Menu</button>
+    </nav>
+
+    <!-- HOME -->
+    <div class="home myFun1" id="1Div">
+        <div class="div-home">
+            <div class="div-img">
+                <div class="text-block">
+                    <h4>Tempura</h4>
+                    <p>Oferta solo fomingos</p>
+                </div>
+            </div>
+            <h1>Titulo</h1>
+            <p>lore</p>
+        </div>
+    </div>
+
+    <!-- QUIENES SOMOS -->
+    <div class="quienessomos myFun1" id="3Div">
+        <div class="div-quienessomos">
+            <h1>Aqui va QUIENES SOMOS</h1>
+        </div>
+    </div>
+
+    <!-- HISTORIA -->
+    <div class="historia myFun1" id="4Div">
+        <div class="div-historia">
+            <h1>Aqui va HISTORIA</h1>
+        </div>
+    </div>
+
+    <!-- EQUIPO -->
+    <div class="equipo myFun1" id="5Div"> 
+        <div class="div-equipo">
+            <h1>Aqui va EQUIPO</h1>
+        </div>
+    </div>
+
+    <!-- CONTACTO -->
+    <div class="contacto myFun1" id="6Div">
+        <div class="div-contacto">
+            <h1>Aqui va CONTACTO</h1>
+        </div>
+    </div>
+    <!-- LINK JS PARA EL NAV-->
+    <script src="FolderJS/function.js"></script>
+</html>
