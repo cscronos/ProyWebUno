@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="FolderCSS/contacto.css">
     <!-- LINKS JS -->
     <script src="FolderJS/esconder.js"></script>
+    <script src="funciones.js"></script>
 </head>
 <body>
     <!-- HEADER -->
@@ -27,6 +28,7 @@
         <a href="FolderProductos/indexProd.html">Productos</a>
         <a href="#" onclick="ActivDiv(3)">Quienes somos</a>
         <a href="#" onclick="ActivDiv(6)">Contacto</a>
+        <!-- <a href="FETCH/index.html">Contacto</a> -->
         <a href="#" id="boton">Menu</a>
     </nav>
 
@@ -93,7 +95,23 @@
     <!-- CONTACTO -->
     <div class="contacto myFun1" id="6Div">
         <div class="div-contacto">
-            <h1>Aqui va CONTACTO</h1>
+            <!--Contactos-->
+            <h1>Aqui va contactos</h1>
+            <!--Simple contact form with javascript ajax and php-->
+            <form action="" method="post" id="formulario">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
+                <input type="email" name="email" id="email" placeholder="Email" />
+                <textarea
+                    name="mensaje"
+                    id="mensaje"
+                    cols="30"
+                    rows="10"
+                    placeholder="mensaje"
+                ></textarea>
+                <input type="submit" id="submit" value="Enviar" />
+            </form>
+            <!--response div-->
+            <div id="respuesta"></div>
         </div>
     </div>
     <footer>
@@ -104,4 +122,5 @@
     </footer>
     <!-- LINK JS PARA EL NAV-->
     <script src="FolderJS/function.js"></script>
+    <script src="variables.js"></script>
 </html>
