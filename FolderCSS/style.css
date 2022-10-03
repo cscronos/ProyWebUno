@@ -77,7 +77,7 @@ ul {
   color: black;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 627px) {
   .navbar a {
     font-size: 20px;
   }
