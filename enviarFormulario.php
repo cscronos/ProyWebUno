@@ -14,11 +14,13 @@ if ($conn->connect_error) {
 
 //get form data
 $nombre = $_POST['nombre'];
+$apellido = $_POST['apellido'];
 $email = $_POST['email'];
 $mensaje = $_POST['mensaje'];
 
+
 //insert form data into database
-$sql = "INSERT INTO OneTest (nombre, email, mensaje) VALUES ('$nombre', '$email', '$mensaje')";
+$sql = "INSERT INTO TwoTest (nombre, apellido, email, mensaje) VALUES ('$nombre','$apellido', '$email', '$mensaje')";
 $result = $conn->query($sql);
 
 $response = array();

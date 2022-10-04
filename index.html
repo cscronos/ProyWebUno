@@ -95,22 +95,29 @@
     <!-- CONTACTO -->
     <div class="contacto myFun1" id="6Div">
         <div class="div-contacto">
-            <!--Contactos-->
-            <h1>Aqui va contactos</h1>
-            <!--Simple contact form with javascript ajax and php-->
+            <h1>Contacto</h1>
+            <p>Ingrese los datos pedidos para luego ser contactado.</p>
+            <!-- Form conectado a php-->
             <form action="" method="post" id="formulario">
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
-                <input type="email" name="email" id="email" placeholder="Email" />
+                <label for="nombre" class="item1">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="nombre..." class="grid-items item2" />
+                <label for="apellido" class="item3">Apellido:</label>
+                <input type="text" name="apellido" id="apellido" placeholder="apellido..." class="grid-items item4"/>
+                <label for="email" class="item5">Email:</label>
+                <input type="email" name="email" id="email" placeholder="email..." class="grid-items item6" />
+                <label for="mensaje" class="item7">Mensaje:</label>
                 <textarea
                     name="mensaje"
                     id="mensaje"
                     cols="30"
                     rows="10"
-                    placeholder="mensaje"
+                    class="grid-items item8"
+                    placeholder="escriba aqui..."
                 ></textarea>
-                <input type="submit" id="submit" value="Enviar" />
+                <input type="submit" id="submit" value="Enviar" class="item9" />
             </form>
-            <!--response div-->
+            <p id="dato-nomenor">Sus datos están resguardados</p>
+            <!-- RESPUESTA EN EL DIV-->
             <div id="respuesta"></div>
         </div>
     </div>
@@ -121,6 +128,6 @@
         </p>
     </footer>
     <!-- LINK JS PARA EL NAV-->
-    <script src="FolderJS/function.js"></script>
+    <script src="FolderJS/mover.js"></script>
     <script src="variables.js"></script>
 </html>
