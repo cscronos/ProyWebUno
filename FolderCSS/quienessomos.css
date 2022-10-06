@@ -3,19 +3,80 @@
 }
 .quienessomos {
     display: none;
-    /* display: block; */
     background: url(../Imagenes/fondo2-1.jpg) no-repeat center center fixed;
     background-size: cover;
     padding: 20px;
 }
 
 .div-quienessomos {
+    display: flex;
     box-shadow: 0px 0px 15px 1px black;
     border-radius: 10px;
     padding: 40px;
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,0.6) 48%, rgba(148,187,233,0.6) 100%);
-    height: 1500px; /* Used in this example to enable scrolling */
+    /* background-color: rgba(51, 51, 51, 0.781); */
+    height: auto;
     color: white;
 }
-  
+
+.div-historia {
+    flex: 50%;
+    padding: 20px;
+
+    color: black;
+    background-color: rgba(235, 235, 235, 0.308);    
+    text-align: right;
+}
+
+.div-historia  h1 ,
+.div-historia h2 ,
+.div-historia p {
+    padding-bottom: 10px;
+}
+.div-equipo {
+    flex: 50%;
+    padding: 20px;
+    background-color: rgba(31, 31, 31, 0.425);
+    text-align: left;
+}
+
+.div-equipo h1,
+.div-equipo h2,
+.div-equipo p {
+    padding-bottom: 10px;
+}
+
+.div-equipo img {
+    width: 200px;
+}
+
+#div-present {
+    display: flex;
+}
+
+#mati, #cris {
+    flex: 50%;
+}
+@media screen and (max-width: 1086px){
+    #div-present {
+        display: block;   
+    }
+    /* .div-equipo {
+        text-align: center;
+    } */
+    /* .div-historia {
+        text-align: center;
+    } */
+}
+@media screen and (max-width: 550px) {
+    .div-quienessomos {
+        display: block;
+    }
+    .div-equipo {
+        text-align: center;
+    }
+    .div-historia {
+    text-align: center;
+    }
+}

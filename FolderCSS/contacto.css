@@ -16,10 +16,11 @@
     height: auto; /* Used in this example to enable scrolling */
     color: white;
 }
-.div-contacto h1, p{
+.div-contacto h1 ,.div-contacto p {
     text-align: center;
 }
 .contacto form {
+    text-align: right;
     display: grid;
     padding-top: 40px;
     gap: 10px;

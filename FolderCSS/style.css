@@ -35,7 +35,7 @@ header {
   width: 100%;
 }
 
-.navbar a {
+.navbar > a {
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -60,7 +60,7 @@ header {
   background-color: #222;
 }
 
-.nav-chico a {
+.nav-chico > a {
   color: white;
   padding: 10px;
   text-decoration: none;
