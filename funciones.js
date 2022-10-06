@@ -9,3 +9,5 @@ async function enviarFormulario(datosFormulario) {
 
     document.getElementById('respuesta').innerHTML = obj.success;
 }
+
+async function recivirDatos(a) {}

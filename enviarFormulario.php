@@ -23,10 +23,11 @@ $mensaje = $_POST['mensaje'];
 $sql = "INSERT INTO TwoTest (nombre, apellido, email, mensaje) VALUES ('$nombre','$apellido', '$email', '$mensaje')";
 $result = $conn->query($sql);
 
+
 $response = array();
 
 if ($result) {
-    $response['success'] = "exito";
+    $response['success'] = "Se enviaron bien los datos";
     exit(json_encode($response));
 } else {
     $response['error'] = "error" . $conn->error;
