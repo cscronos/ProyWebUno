@@ -1,7 +1,6 @@
 <?php
 
-//get form data and send to mysql database
-//import connection variables
+// Traemos los datos
 include_once 'config.php';
 
 // Create connection - OOP
@@ -23,7 +22,7 @@ $mensaje = $_POST['mensaje'];
 $sql = "INSERT INTO TwoTest (nombre, apellido, email, mensaje) VALUES ('$nombre','$apellido', '$email', '$mensaje')";
 $result = $conn->query($sql);
 
-
+// array vacia
 $response = array();
 
 if ($result) {
