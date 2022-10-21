@@ -4,8 +4,13 @@
 .contacto {
     display: none;
     /* display: block; */
-    background: url(../Imagenes/fondo2-1.jpg) no-repeat center center fixed;
-    background-size: cover;
+
+    /* Fondo imagen */
+    /* background: url(../Imagenes/fondo2-1.jpg) no-repeat center center fixed;
+
+    /* Fondo solo color */
+    background-color: rgb(37, 37, 37);
+    background-size: cover; 
     padding: 20px;
 }
 .div-contacto {
