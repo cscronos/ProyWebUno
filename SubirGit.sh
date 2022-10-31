@@ -1,5 +1,5 @@
 #! /bin/bash
-git init
+
 git add .
-git commit -m "Edicion de fondo para optimizar"
+git commit -m "crud 1"
 git push
