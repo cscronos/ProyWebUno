@@ -6,12 +6,12 @@
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
         <title>Bokato Sushi</title>
         <!-- lINKS CSS -->
-        <link rel="stylesheet" href="FolderCSS/style.css" />
-        <link rel="stylesheet" href="FolderCSS/home.css" />
-        <link rel="stylesheet" href="FolderCSS/quienessomos.css" />
-        <link rel="stylesheet" href="FolderCSS/contacto.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/home.css" />
+        <link rel="stylesheet" href="css/quienessomos.css" />
+        <link rel="stylesheet" href="css/contacto.css" />
         <!-- LINKS JS -->
-        <script src="FolderJS/esconder.js"></script>
+        <script src="js/esconder.js"></script>
         <script src="funciones.js"></script>
         <script src="datos.js"></script>
     </head>
@@ -200,14 +200,14 @@
                     </table>
                 </div>
                 <div>
-                    <form action="FolderPHP/actualizar.php" method="post">
+                    <form action="crud/actualizar.php" method="post">
                         <input type="text" name="nombreNew">
                         <input type="numbre" name="id">
                         <input type="submit" value="actualizar">
                     </form>
                 </div>
                 <div>
-                    <form action="FolderPHP/delete.php" method="post">
+                    <form action="crud/delete.php" method="post">
                         <input type="numbre" name="id">
                         <input type="submit" value="delete">
                     </form>
@@ -223,7 +223,7 @@
             </p>
         </footer>
         <!-- LINK JS PARA EL NAV-->
-        <script src="FolderJS/mover.js"></script>
+        <script src="js/mover.js"></script>
         <script src="variables.js"></script>
     </body>
 </html>

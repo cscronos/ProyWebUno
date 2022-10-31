@@ -3,7 +3,7 @@
 // luego manejar los datos e imprimirlos con un formato
 // definido
 function llamarDatos() {
-    fetch("FolderPHP/recivirDatos.php")
+    fetch("crud/recivirDatos.php")
         .then((response) => response.json())
         .then((data) => mostrarData(data))
         .catch((error) => console.log(error));

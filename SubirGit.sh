@@ -1,5 +1,5 @@
 #! /bin/bash
 
 git add .
-git commit -m "crud 1"
+git commit -m "sesiones 1"
 git push
