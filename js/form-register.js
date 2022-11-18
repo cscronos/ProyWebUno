@@ -11,9 +11,12 @@ async function enviarFormulario(datosFormulario) {
     if (!obj.error) {
         document.getElementById(
             "respuesta"
-        ).innerHTML = `${obj.success}, em 4 seg cargara el login. espere:)`;
+        ).innerHTML = `${obj.success}, en 3 seg cargara el login. espere:)`;
 
-        setTimeout(cambiarWindow, 4000);
+        setTimeout(cambiarContador, 1000);
+        setTimeout(cambiarContador, 2000);
+        setTimeout(cambiarContador, 3000);
+        setTimeout(cambiarWindow, 3500);
         return;
     }
 
@@ -24,8 +27,17 @@ async function enviarFormulario(datosFormulario) {
     }
 }
 
+var contador = 1;
+function cambiarContador() {
+    console.log(contador);
+    document.getElementById("contador").innerHTML = contador;
+    contador += 1;
+    return contador;
+}
+
 function cambiarWindow() {
-    console.log("hola");
+    console.log("4 second??");
+    window.location.href = "../login/login.php";
 }
 
 document

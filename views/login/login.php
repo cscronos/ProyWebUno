@@ -28,5 +28,6 @@
             <input type="submit" name="enviar" value="login">
         </form>
     </div>
+    <script src="../../js/form-login.js"></script>
 </body>
 </html>
