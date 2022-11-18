@@ -1,3 +1,9 @@
+<?php
+    if (!isset($_SESSION["usuario"])){
+        header("Location: login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,14 +12,14 @@
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
         <title>Bokato Sushi</title>
         <!-- lINKS CSS -->
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/home.css" />
-        <link rel="stylesheet" href="css/quienessomos.css" />
-        <link rel="stylesheet" href="css/contacto.css" />
+        <link rel="stylesheet" href="../../css/style.css" />
+        <link rel="stylesheet" href="../../css/home.css" />
+        <link rel="stylesheet" href="../../css/quienessomos.css" />
+        <link rel="stylesheet" href="../../css/contacto.css" />
         <!-- LINKS JS -->
-        <script src="js/esconder.js"></script>
-        <script src="funciones.js"></script>
-        <script src="datos.js"></script>
+        <script src="../../js/esconder.js"></script>
+        <script src="../../js/funciones.js"></script>
+        <script src="../../js/datos.js"></script>
     </head>
     <body>
         <!-- HEADER -->
@@ -21,14 +27,14 @@
             <h1 id="logo0">Bokato Sushi</h1>
             <img
                 id="logo1"
-                src="Imagenes/sushi-solid-240.png"
+                src="../../img/sushi-solid-240.png"
                 alt="logo sushi" />
         </header>
 
         <!-- NAV -->
         <nav class="navbar" id="myFun">
             <a href="#" onclick="ActivDiv(1)">Home</a>
-            <a href="FolderProductos/index.html">Productos</a>
+            <a href="../productos/index.html">Productos</a>
             <a href="#" onclick="ActivDiv(3)">Quienes somos</a>
             <a href="#" onclick="ActivDiv(6)">Contacto</a>
             <!-- <a href="FETCH/index.html">Contacto</a> -->
@@ -38,7 +44,7 @@
         <!-- NAV CHICO -->
         <ul class="nav-chico myFun1" id="nav-chico">
             <li><a href="#" onclick="ActivDiv(1)">Home</a></li>
-            <li><a href="FolderProductos/index.html">Productos</a></li>
+            <li><a href="../productos/index.html">Productos</a></li>
             <li><a href="#" onclick="ActivDiv(3)">Quienes somos</a></li>
             <li><a href="#" onclick="ActivDiv(6)">Contacto</a></li>
         </ul>
@@ -127,12 +133,12 @@
                     <div id="div-present">
                         <div id="mati">
                             <h2>Matias Valenzuela</h2>
-                            <img src="Imagenes/matifer.jpg" alt="" />
+                            <img src="../../img/matifer.jpg" alt="" />
                             <p>Nació 8 de Septiembre, 2003</p>
                         </div>
                         <div id="cris">
                             <h2>Cristobal Sandoval</h2>
-                            <img src="Imagenes/cristobal.jpeg" alt="" />
+                            <img src="../../img/cristobal.jpeg" alt="" />
                             <p>Nació el 29 de mayo, 2002</p>
                         </div>
                     </div>
@@ -200,14 +206,14 @@
                     </table>
                 </div>
                 <div>
-                    <form action="crud/actualizar.php" method="post">
+                    <form action="../../rsc/crud/actualizar.php" method="post">
                         <input type="text" name="nombreNew">
                         <input type="numbre" name="id">
                         <input type="submit" value="actualizar">
                     </form>
                 </div>
                 <div>
-                    <form action="crud/delete.php" method="post">
+                    <form action="../../rsc/crud/delete.php" method="post">
                         <input type="numbre" name="id">
                         <input type="submit" value="delete">
                     </form>
@@ -223,7 +229,6 @@
             </p>
         </footer>
         <!-- LINK JS PARA EL NAV-->
-        <script src="js/mover.js"></script>
-        <script src="variables.js"></script>
+        <script src="../../js/mover.js"></script>
     </body>
 </html>
