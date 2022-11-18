@@ -1,6 +1,7 @@
 <?php
-    if (!isset($_SESSION["usuario"])){
-        header("Location: login.php");
+    session_start();
+    if(!isset($_SESSION["usuario"])){
+        header("Location: ../login/login.php");
     }
 ?>
 
@@ -22,6 +23,7 @@
         <script src="../../js/datos.js"></script>
     </head>
     <body>
+        <?php // echo $_SESSION["usuario"]; ?>
         <!-- HEADER -->
         <header>
             <h1 id="logo0">Bokato Sushi</h1>

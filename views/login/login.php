@@ -1,8 +1,12 @@
 <?php
-    session_start();
+    if(isset($_POST["enviar"])) {
+        session_start();
 
-    $nombre = $_SESSION["usuario"];
-    $password = $_SESSION["contraseña"];
+        $_SESSION["usuario"] = htmlentities($_POST["usuario"]);
+        $_SESSION["contraseña"] = htmlentities($_POST["contraseña"]);
+
+        header("Location: ../index/index.php");
+    }
 
 ?>
 
@@ -13,15 +17,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sesiones</title>
-    <link rel="stylesheet" href="css/style_login.css">
+    <link rel="stylesheet" href="../../css/style_login.css">
 </head>
 <body>
-    <div>
-        <h2 style="color: white">Bienvenido <?php $nombre; ?></h2>
+    <div class="flex">
+        <h1>Login</h1>
         <form action="" method="post">
-            <input type="text" name="nombre" id="" placeholder="nombre...">
-            <input type="text" name="contraseña" id="" placeholder="contraseña...">
-            <input type="submit" value="login">
+            <input type="text" name="usuario" id="" placeholder="usuario...">
+            <input type="password" name="contraseña" id="" placeholder="contraseña...">
+            <input type="submit" name="enviar" value="login">
         </form>
     </div>
 </body>
