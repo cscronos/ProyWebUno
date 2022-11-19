@@ -1,7 +1,3 @@
-// Despues de llamar la funcion
-// lee los datos del archo php con fetch
-// luego manejar los datos e imprimirlos con un formato
-// definido
 function llamarDatos() {
     fetch("../crud/recivirDatos.php")
         .then((response) => response.json())

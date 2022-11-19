@@ -1,6 +1,6 @@
 <?php
 
-include_once 'config.php';
+include_once '../config.php';
 
 // Create connection - OOP
 $con = new mysqli($servername, $username, $password, $dbname);
@@ -9,8 +9,9 @@ $con = new mysqli($servername, $username, $password, $dbname);
 if ($con->connect_error) {
     die("Connection failed: " . $con->connect_error);
 }
-
-$sql = "SELECT * FROM TwoTest";
+session_start();
+$user_ses = $_SESSION['usuario'];
+$sql = "SELECT * FROM comentarios WHERE user='$user_ses'";
 
 $result = $con->query($sql);
 

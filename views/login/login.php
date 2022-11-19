@@ -1,13 +1,9 @@
 <?php
-    if(isset($_POST["enviar"])) {
+    if(isset($_POST["usuario"])) {
         session_start();
-
-        $_SESSION["usuario"] = htmlentities($_POST["usuario"]);
+        $_SESSION["usuario"] = $_POST["usuario"];
         $_SESSION["contraseña"] = htmlentities($_POST["contraseña"]);
-
-        header("Location: ../index/index.php");
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -22,12 +18,13 @@
 <body>
     <div class="flex">
         <h1>Login</h1>
-        <form action="" method="post">
-            <input type="text" name="usuario" id="" placeholder="usuario...">
-            <input type="password" name="contraseña" id="" placeholder="contraseña...">
+        <form action="" method="post" id="form-login">
+            <input type="text" name="usuario" placeholder="usuario...">
+            <input type="password" name="contraseña" placeholder="contraseña...">
             <input type="submit" name="enviar" value="login">
         </form>
     </div>
+    <div id="respuesta"></div>
     <script src="../../js/form-login.js"></script>
 </body>
 </html>

@@ -1,8 +1,13 @@
 <?php
-    session_start();
-    if(!isset($_SESSION["usuario"])){
-        header("Location: ../login/login.php");
-    }
+
+include_once '../../rsc/admin/admin.php';
+
+session_start();
+
+if(!isset($_SESSION["usuario"])){
+    header("Location: ../login/login.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -19,11 +24,9 @@
         <link rel="stylesheet" href="../../css/contacto.css" />
         <!-- LINKS JS -->
         <script src="../../js/esconder.js"></script>
-        <script src="../../js/funciones.js"></script>
         <script src="../../js/datos.js"></script>
     </head>
     <body>
-        <?php // echo $_SESSION["usuario"]; ?>
         <!-- HEADER -->
         <header>
             <h1 id="logo0">Bokato Sushi</h1>
@@ -155,28 +158,6 @@
                 <p>Ingrese los datos pedidos para luego ser contactado.</p>
                 <!-- Form conectado a php-->
                 <form action="" method="post" id="formulario">
-                    <label for="nombre" class="item1">Nombre:</label>
-                    <input
-                        type="text"
-                        name="nombre"
-                        id="nombre"
-                        placeholder="nombre..."
-                        class="grid-items item2" />
-                    <label for="apellido" class="item3">Apellido:</label>
-                    <input
-                        type="text"
-                        name="apellido"
-                        id="apellido"
-                        placeholder="apellido..."
-                        class="grid-items item4" />
-                    <label for="email" class="item5">Email:</label>
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="email..."
-                        class="grid-items item6" />
-                    <label for="mensaje" class="item7">Mensaje:</label>
                     <textarea
                         name="mensaje"
                         id="mensaje"
@@ -194,6 +175,7 @@
                 <div id="respuesta"></div>
                 <!-- Mostrar Datos en tabla-->
                 <button onclick="llamarDatos()">Ver Datos</button>
+                <?php ad60(); ?>
                 <div>
                     <table>
                         <thead>
@@ -202,24 +184,14 @@
                                 <th>Nombre</th>
                                 <th>Apellido</th>
                                 <th>Email</th>
+                                <th>Eliminar</th>
                             </tr>
                         </thead>
                         <tbody id="data"></tbody>
                     </table>
                 </div>
-                <div>
-                    <form action="../../rsc/crud/actualizar.php" method="post">
-                        <input type="text" name="nombreNew">
-                        <input type="numbre" name="id">
-                        <input type="submit" value="actualizar">
-                    </form>
-                </div>
-                <div>
-                    <form action="../../rsc/crud/delete.php" method="post">
-                        <input type="numbre" name="id">
-                        <input type="submit" value="delete">
-                    </form>
-                </div>
+                <!-- aqui va  -->
+                <div></div>
             </div>
         </div>
         <!-- FOOTER -->
@@ -232,5 +204,6 @@
         </footer>
         <!-- LINK JS PARA EL NAV-->
         <script src="../../js/mover.js"></script>
+        <script src="../../js/funciones.js"></script>
     </body>
 </html>
