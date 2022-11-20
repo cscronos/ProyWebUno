@@ -1,10 +1,6 @@
 <?php
 
 session_start();
-if(!isset($_SESSION['admin']) || $_SESSION["admin"] == 0){
-    header("Location: ../login/login.php");
-}
-
 include_once '../config.php';
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -55,6 +51,7 @@ if (isset($_POST['usuario']) && isset($_POST['contraseña'])) {
         exit(json_encode($response2));
     } else {
         $response2['success'] = "Correcto";
+        $_SESSION['usuario'] = $nombre;
         exit(json_encode($response2));
     }
 }

@@ -1,11 +1,3 @@
-<?php
-    if(isset($_POST["usuario"])) {
-        session_start();
-        $_SESSION["usuario"] = $_POST["usuario"];
-        $_SESSION["contraseña"] = htmlentities($_POST["contraseña"]);
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

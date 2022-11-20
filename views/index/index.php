@@ -22,9 +22,9 @@ if(!isset($_SESSION["usuario"])){
         <link rel="stylesheet" href="../../css/home.css" />
         <link rel="stylesheet" href="../../css/quienessomos.css" />
         <link rel="stylesheet" href="../../css/contacto.css" />
+        <link rel="stylesheet" href="../../css/tabla-update.css" />
         <!-- LINKS JS -->
         <script src="../../js/esconder.js"></script>
-        <script src="../../js/datos.js"></script>
     </head>
     <body>
         <!-- HEADER -->
@@ -42,6 +42,7 @@ if(!isset($_SESSION["usuario"])){
             <a href="../productos/index.html">Productos</a>
             <a href="#" onclick="ActivDiv(3)">Quienes somos</a>
             <a href="#" onclick="ActivDiv(6)">Contacto</a>
+            <a href="../../rsc/admin/logout.php" >Log out</a>
             <!-- <a href="FETCH/index.html">Contacto</a> -->
             <a href="#" id="boton">Menu</a>
         </nav>
@@ -155,7 +156,7 @@ if(!isset($_SESSION["usuario"])){
         <div class="contacto myFun1" id="6Div">
             <div class="div-contacto">
                 <h1>Contacto</h1>
-                <p>Ingrese los datos pedidos para luego ser contactado.</p>
+                <p>Escriba su comentario.</p>
                 <!-- Form conectado a php-->
                 <form action="" method="post" id="formulario">
                     <textarea
@@ -173,22 +174,54 @@ if(!isset($_SESSION["usuario"])){
                 </form>
                 <p id="dato-nomenor">Sus datos están resguardados</p>
                 <div id="respuesta"></div>
-                <!-- Mostrar Datos en tabla-->
-                <button onclick="llamarDatos()">Ver Datos</button>
-                <?php ad60(); ?>
-                <div>
-                    <table>
+                <!-- ELIMINAR COMENTARIO TABLA -->
+                <div class="contenedor-buttons">
+                    <?php ad60(); ?>
+                </div>
+                <div id="div-table-eliminar">
+                    <table class="tabla-eliminar">
                         <thead>
-                            <tr>
+                            <tr class="tabla-head-tr">
                                 <th>Id</th>
                                 <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Email</th>
+                                <th>Comentario</th>
                                 <th>Eliminar</th>
                             </tr>
                         </thead>
                         <tbody id="data"></tbody>
                     </table>
+                </div>
+                <div id="respuesta-eliminar"></div>
+                <!-- EDITAR COMENTARIO TABLA -->
+                <div class="contenedor-buttons">
+                    <button class="btn success" id="updateData">Editar</button>
+                </div>
+                <div id="div-table-editar">
+                    <table class="tabla-update">
+                        <thead class="tabla-head">
+                            <tr class="tabla-head-tr">
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Comentario</th>
+                                <th>Editar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="data2"></tbody>
+                    </table>
+                    <div id="div-form-editar">
+                        <form action="" metodo="post" id="form-update">
+                            <p style="color: white">Aquí editamos el<br>mensaje seleccionado</p>
+                            <input type="text" name="new_comentario" id="mensaje2" placeholder="nuevo comentario...">
+                            <input type="submit" value="updatear comentario">
+                        </form>
+                    </div>
+                </div>
+                <div class="div-form-invi">
+                    <!-- FORMULARIOS INVI -->
+                    <form action="" metodo="post" id="form-invi-1">
+                        <input type="text" name="text">
+                        <input type="submit" value="">
+                    </form>
                 </div>
                 <!-- aqui va  -->
                 <div></div>
@@ -196,8 +229,8 @@ if(!isset($_SESSION["usuario"])){
         </div>
         <!-- FOOTER -->
         <footer>
-            <p
-                >© Bokato Sushi. Todos los derechos reservados. Todas las
+            <p>
+                © Bokato Sushi. Todos los derechos reservados. Todas las
                 imágenes utilizadas en este sitio son referenciales. | Trabajo
                 Desarrollo web
             </p>
@@ -205,5 +238,6 @@ if(!isset($_SESSION["usuario"])){
         <!-- LINK JS PARA EL NAV-->
         <script src="../../js/mover.js"></script>
         <script src="../../js/funciones.js"></script>
+        <script src="../../js/funciones-crud.js"></script>
     </body>
 </html>

@@ -6,8 +6,10 @@ async function enviarFormulario(datosFormulario) {
 
     const respuesta = await response.text();
     const obj = JSON.parse(respuesta);
+    console.log("hola");
 
     document.getElementById("respuesta").innerHTML = obj.success;
+    document.getElementById("mensaje").value = "";
 }
 
 document
